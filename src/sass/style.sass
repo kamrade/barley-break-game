@@ -1,0 +1,275 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono)
+@import 'settings'
+
+*,
+html,
+body
+	margin: 0
+	padding: 0
+
+html
+	height: 100%
+
+body
+	background: getColor('primary')
+	color: getColor('white')
+	font-family: 'Share Tech Mono', 'Helvetica Neue', Helvetica, Arial, sans-serif
+	background-image: repeating-linear-gradient(0deg, rgba(white,.1), rgba(white,.1) 1px, transparent 2px, transparent 4px, rgba(white,.1) 5px)
+	//background-size: 4px
+	background-repeat: repeat
+
+h1
+	font-size: 3em
+	letter-spacing: -4px
+	color: getColor('light')
+	text-align: center
+	text-transform: uppercase
+
+.wrapper
+	padding-top: 50px
+
+#barley-break-container
+	box-sizing: border-box
+	height: 426px
+	width:  426px
+	padding: 8px
+	border: 5px solid rgba(getColor('accent'), .5)
+	margin: 0 auto
+	background: getColor('dark')
+	margin-top: 30px
+	border-radius: 10px
+
+.bar
+	box-sizing: border-box
+	height: 96px
+	width: 96px
+	border: 1px solid getColor('light')
+	margin: 2px
+	float: left
+	background: getColor('secondary')
+	display: flex
+	cursor: pointer
+	transition: all .05s ease-in
+	border-radius: 5px
+	//background-image: repeating-linear-gradient(45deg, rgba(white,.1) 0px,  rgba(white, .1) 3px, transparent 4px, rgba(white,0) 10px)
+	//opacity: .7
+
+
+	&:hover
+		border: 3px solid darken(getColor('light'), 10%)
+		
+	span
+		display: block
+		color: getColor('light');
+		font-size: 36px
+		text-align: center
+		margin: auto
+
+.dotted
+	box-sizing: border-box
+	background-size: 50px 50px
+	background-image: repeating-radial-gradient(center center, white, white 1px, transparent 1px, transparent 100%)
+	opacity: .3
+	height: 100%
+	width: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+
+.barley-break-wrapper
+	position: relative
+
+.bar
+	position: absolute
+	user-select: none
+
+	&-1
+		top: 0px
+		left: 0px
+
+	&-2
+		top: 0px
+		left: 100px
+
+	&-3
+		top: 0px
+		left: 200px
+
+	&-4
+		top: 0px
+		left: 300px
+
+	&-5
+		top: 100px
+		left: 0px
+
+	&-6
+		top: 100px
+		left: 100px
+
+	&-7
+		top: 100px
+		left: 200px
+
+	&-8
+		top: 100px
+		left: 300px
+
+	&-9
+		top: 200px
+		left: 0px
+
+	&-10
+		top: 200px
+		left: 100px
+
+	&-11
+		top: 200px
+		left: 200px
+
+	&-12
+		top: 200px
+		left: 300px
+
+	&-13
+		top: 300px
+		left: 0px
+
+	&-14
+		top: 300px
+		left: 100px
+
+	&-15
+		top: 300px
+		left: 200px
+
+	&-16
+		top: 300px
+		left: 300px
+
+.selected
+	box-sizing: border-box
+	border: 10px solid getColor('accent')
+
+.empty
+	box-sizing: border-box
+	border: none
+	background: getColor('dark')
+
+	span
+		display: none
+
+	&:hover
+		background: getColor('dark')
+
+div.btns
+	position: relative
+	margin: 20px auto	
+	display: flex
+	justify-content: center
+
+
+button.btn
+	font-size: 18px
+	margin-top: 20px
+	height: 30px
+	width: 120px
+	border-radius: 5px
+	background-color: rgba(getColor('accent'),.7)
+	border: none
+	text-transform: uppercase
+	color: getColor('light')
+	transition: all .2s ease-out
+	cursor: pointer
+	margin: 10px 10px
+
+	&:hover
+		background-color: getColor('accent')
+
+.animated
+	background: darken(getColor('secondary'), 10%)
+	animation: 1s ease-in 0s normal none infinite opacity
+	
+	animation-duration: 1s
+	animation-timing-function: ease-in
+	animation-delay: 0s
+	animation-play-state: running //paused|running|initial|inherit
+	animation-direction: normal //|reverse|alternate|alternate-reverse|initial|inherit
+	animation-fill-mode: none //none|forwards|backwards|both|initial|inherit
+	animation-iteration-count: infinite
+	animation-name: opacity
+
+@keyframes opacity
+  0%
+    opacity: 1
+  50%
+    opacity: .7
+  100%
+    opacity: 1
+
+
+
+
+div.you-win-wrapper
+	position: fixed
+	top: 0px
+	left: 0px
+	height: 100%
+	width: 100%
+	background-color: rgba(getColor('primary'), .8)
+
+	.you-win
+		
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+		height: 150px
+		width: 80%
+		background-color: getColor('accent-good')
+		border: 5px solid getColor('light')
+		border-radius: 5px
+		@extend .animated
+		display: flex
+		flex-direction: column
+		cursor: pointer
+		
+		h2.winner
+			text-align: center
+			margin: 20px auto 0
+			font-size: 80px
+			text-transform: uppercase
+			letter-spacing: -4px
+			color: getColor('light')
+			user-select: none
+			cursor: pointer
+
+		p
+			text-align: center
+			margin: 0 auto
+			text-transform: uppercase
+			color: getColor('light')
+			user-select: none
+			cursor: pointer
+
+
+.hidden
+	display: none
+
+.console
+	text-align: center
+	color: getColor('light')
+	letter-spacing: -2px
+	line-height: 36px
+
+
+#results
+	li
+		text-align: center
+
+	li.pass
+		color: getColor('light')
+
+	li.fail
+		color: getColor('accent')

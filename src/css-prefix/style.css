@@ -1,0 +1,283 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+/* config */
+/* functions */
+*,
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  background: #24242e;
+  font-family: 'Share Tech Mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-image: -webkit-repeating-linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 2px, transparent 4px, rgba(255, 255, 255, 0.1) 5px);
+  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 2px, transparent 4px, rgba(255, 255, 255, 0.1) 5px);
+  background-repeat: repeat; }
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -4px;
+  color: #eafce3;
+  text-align: center;
+  text-transform: uppercase; }
+
+.wrapper {
+  padding-top: 50px; }
+
+#barley-break-container {
+  box-sizing: border-box;
+  height: 426px;
+  width: 426px;
+  padding: 8px;
+  border: 5px solid rgba(253, 112, 95, 0.5);
+  margin: 0 auto;
+  background: #222;
+  margin-top: 30px;
+  border-radius: 10px; }
+
+.bar {
+  box-sizing: border-box;
+  height: 96px;
+  width: 96px;
+  border: 1px solid #eafce3;
+  margin: 2px;
+  float: left;
+  background: #6e756d;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: all .05s ease-in;
+  transition: all .05s ease-in;
+  border-radius: 5px; }
+  .bar:hover {
+    border: 3px solid #c7f7b5; }
+  .bar span {
+    display: block;
+    color: #eafce3;
+    font-size: 36px;
+    text-align: center;
+    margin: auto; }
+
+.dotted {
+  box-sizing: border-box;
+  background-size: 50px 50px;
+  background-image: -webkit-repeating-radial-gradient(center center, white, white 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, white, white 1px, transparent 1px, transparent 100%);
+  opacity: .3;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+.barley-break-wrapper {
+  position: relative; }
+
+.bar {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .bar-1 {
+    top: 0px;
+    left: 0px; }
+  .bar-2 {
+    top: 0px;
+    left: 100px; }
+  .bar-3 {
+    top: 0px;
+    left: 200px; }
+  .bar-4 {
+    top: 0px;
+    left: 300px; }
+  .bar-5 {
+    top: 100px;
+    left: 0px; }
+  .bar-6 {
+    top: 100px;
+    left: 100px; }
+  .bar-7 {
+    top: 100px;
+    left: 200px; }
+  .bar-8 {
+    top: 100px;
+    left: 300px; }
+  .bar-9 {
+    top: 200px;
+    left: 0px; }
+  .bar-10 {
+    top: 200px;
+    left: 100px; }
+  .bar-11 {
+    top: 200px;
+    left: 200px; }
+  .bar-12 {
+    top: 200px;
+    left: 300px; }
+  .bar-13 {
+    top: 300px;
+    left: 0px; }
+  .bar-14 {
+    top: 300px;
+    left: 100px; }
+  .bar-15 {
+    top: 300px;
+    left: 200px; }
+  .bar-16 {
+    top: 300px;
+    left: 300px; }
+
+.selected {
+  box-sizing: border-box;
+  border: 10px solid #fd705f; }
+
+.empty {
+  box-sizing: border-box;
+  border: none;
+  background: #222; }
+  .empty span {
+    display: none; }
+  .empty:hover {
+    background: #222; }
+
+div.btns {
+  position: relative;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+button.btn {
+  font-size: 18px;
+  margin-top: 20px;
+  height: 30px;
+  width: 120px;
+  border-radius: 5px;
+  background-color: rgba(253, 112, 95, 0.7);
+  border: none;
+  text-transform: uppercase;
+  color: #eafce3;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  cursor: pointer;
+  margin: 10px 10px; }
+  button.btn:hover {
+    background-color: #fd705f; }
+
+.animated, div.you-win-wrapper .you-win {
+  background: #555b54;
+  -webkit-animation: 1s ease-in 0s normal none infinite opacity;
+  animation: 1s ease-in 0s normal none infinite opacity;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: opacity;
+  animation-name: opacity; }
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: .7; }
+  100% {
+    opacity: 1; } }
+
+@keyframes opacity {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: .7; }
+  100% {
+    opacity: 1; } }
+
+div.you-win-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(36, 36, 46, 0.8); }
+  div.you-win-wrapper .you-win {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    height: 150px;
+    width: 80%;
+    background-color: #427f3e;
+    border: 5px solid #eafce3;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    cursor: pointer; }
+    div.you-win-wrapper .you-win h2.winner {
+      text-align: center;
+      margin: 20px auto 0;
+      font-size: 80px;
+      text-transform: uppercase;
+      letter-spacing: -4px;
+      color: #eafce3;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer; }
+    div.you-win-wrapper .you-win p {
+      text-align: center;
+      margin: 0 auto;
+      text-transform: uppercase;
+      color: #eafce3;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer; }
+
+.hidden {
+  display: none; }
+
+.console {
+  text-align: center;
+  color: #eafce3;
+  letter-spacing: -2px;
+  line-height: 36px; }
+
+#results li {
+  text-align: center; }
+
+#results li.pass {
+  color: #eafce3; }
+
+#results li.fail {
+  color: #fd705f; }

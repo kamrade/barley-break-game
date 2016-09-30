@@ -1,0 +1,28 @@
+{
+  "name": "barleyBreak",
+  "authors": [
+    "Denis Michailov <kamrad.reg@gmail.com>"
+  ],
+  "description": "small game",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "small",
+    "game",
+    "barley",
+    "break"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "pepjs": "~0.4.0"
+  }
+}
